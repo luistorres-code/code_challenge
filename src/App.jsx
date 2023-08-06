@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Exercise from "./pages/Exercise";
+import ErrorPage from "./pages/NotFound";
 
 function App() {
 	return (
@@ -9,7 +10,7 @@ function App() {
 			<div>Hola mundo</div>
 
 			<Routes>
-				<Route path="/" exact element={<Home />} />
+				<Route path="/" exact element={<Home />} errorElement={<ErrorPage />} />
 				<Route path="/exercise/:id" element={<Exercise />} />
 			</Routes>
 		</>
