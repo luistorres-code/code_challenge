@@ -6,16 +6,24 @@ const problemsDict = {
 		name: "Two Numbers Sum",
 		functionSolve: twoNumbersSum,
 		funtionInString: `function twoNumbersSum(array, target) {
+			// Create a Map data structure to store elements of the input array along with their indices
 			const hashMap = new Map();
 		
+			// Iterate through the input array
 			for (let i = 0; i < array.length; i++) {
+				// Calculate the complement of the current element
 				const complement = target - array[i];
+		
+				// If the complement is in the hashMap, return the indices of the two numbers
 				if (hashMap.has(complement)) {
 					return [hashMap.get(complement), i];
 				}
+		
+				// Add the current element to the hashMap if it is not already in the hashMap
 				hashMap.set(array[i], i);
 			}
 		
+			// Return an empty array if no two numbers in the input array add up to the target
 			return [];
 		}`,
 		problem: "Given a list nums of n integers where nums[i] is in the range [1, list length], write a function that solves the following problem; return a list of all the integers in the range [1, list length] that do not appear in nums.",
@@ -33,24 +41,31 @@ const problemsDict = {
 		name: "Missing Numbers",
 		functionSolve: getMissingNumbers,
 		funtionInString: `function getMissingNumbers(arrayOfNumbers) {
+			// Create an empty array to store the missing numbers
 			const missingNumbers = [];
-		
+
+			// Return an empty array if the input is not an array
 			if (!Array.isArray(arrayOfNumbers)) {
 				return missingNumbers;
 			}
-		
+
+			// Return an empty array if the input array is empty
 			if (arrayOfNumbers.length === 0) {
 				return missingNumbers;
 			}
-		
+
+			// Create a Set data structure to store the elements of the input array
 			const setOfNumbers = new Set(arrayOfNumbers);
-		
+
+			// Iterate through the numbers from 1 to the length of the input array
 			for (let i = 1; i <= arrayOfNumbers.length; i++) {
+				// If the current number is not in the set, add it to the missing numbers array
 				if (!setOfNumbers.has(i)) {
 					missingNumbers.push(i);
 				}
 			}
-		
+
+			// Return the missing numbers array
 			return missingNumbers;
 		}`,
 		problem: "Given a list of integers nums and an integer target, write a function that solves the following problem; return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
