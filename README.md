@@ -1,8 +1,27 @@
-# React + Vite
+# Code Challenge - Luis Torres
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is a code challenge for a job application. The challenge is make two functions that return the following:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. A function that returns indexes of the two numbers such that they add up to a specific target.
+
+2. A function that returns missing numbers of a list of numbers.
+
+You can see the challenge in live [here](#).
+
+## Installation
+
+Use the npm package manager to install the dependencies.
+
+```bash
+npm install
+```
+
+## Usage
+
+To run the application, use the following command:
+
+```bash
+npm run build
+```
