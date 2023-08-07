@@ -14,7 +14,7 @@ function Exercise() {
 	const { id } = useParams();
 	const idNumber = parseInt(id);
 	const problemToShow = problemsDict[idNumber];
-	const { name, functionSolve, problem, examples, timeComplexity, spaceComplexity } = problemToShow;
+	const { name, functionSolve, problem, examples, timeComplexity, spaceComplexity, funtionInString } = problemToShow;
 
 	return (
 		<>
@@ -28,7 +28,7 @@ function Exercise() {
 				<p className="w-full md:w-9/12 p-4 border border-green-dexcom-dark border-b-0">{problem}</p>
 				<ExerciseButtons setVisibleTry={setVisibleTry} />
 
-				{visibleTry ? <TrySection functionSolve={functionSolve} examples={examples} id={id} /> : <ExplanationSection functionSolve={functionSolve} spaceComplexity={spaceComplexity} timeComplexity={timeComplexity} />}
+				{visibleTry ? <TrySection functionSolve={functionSolve} examples={examples} id={id} /> : <ExplanationSection functionSolve={funtionInString} spaceComplexity={spaceComplexity} timeComplexity={timeComplexity} />}
 			</main>
 		</>
 	);

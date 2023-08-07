@@ -5,6 +5,19 @@ const problemsDict = {
 	1: {
 		name: "Two Numbers Sum",
 		functionSolve: twoNumbersSum,
+		funtionInString: `function twoNumbersSum(array, target) {
+			const hashMap = new Map();
+		
+			for (let i = 0; i < array.length; i++) {
+				const complement = target - array[i];
+				if (hashMap.has(complement)) {
+					return [hashMap.get(complement), i];
+				}
+				hashMap.set(array[i], i);
+			}
+		
+			return [];
+		}`,
 		problem: "Given a list nums of n integers where nums[i] is in the range [1, list length], write a function that solves the following problem; return a list of all the integers in the range [1, list length] that do not appear in nums.",
 		examples: ["Input: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].", "Input: nums = [3,2,4], target = 6\nOutput: [1,2]", "Input: nums = [3,3], target = 6\nOutput: [0,1]"],
 		timeComplexity: {
@@ -19,6 +32,27 @@ const problemsDict = {
 	2: {
 		name: "Missing Numbers",
 		functionSolve: getMissingNumbers,
+		funtionInString: `function getMissingNumbers(arrayOfNumbers) {
+			const missingNumbers = [];
+		
+			if (!Array.isArray(arrayOfNumbers)) {
+				return missingNumbers;
+			}
+		
+			if (arrayOfNumbers.length === 0) {
+				return missingNumbers;
+			}
+		
+			const setOfNumbers = new Set(arrayOfNumbers);
+		
+			for (let i = 1; i <= arrayOfNumbers.length; i++) {
+				if (!setOfNumbers.has(i)) {
+					missingNumbers.push(i);
+				}
+			}
+		
+			return missingNumbers;
+		}`,
 		problem: "Given a list of integers nums and an integer target, write a function that solves the following problem; return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
 		examples: ["Input: nums = [4,3,2,7,8,2,3,1]\nOutput: [5,6]", "Input: nums = [1,1]\nOutput: [2]"],
 		timeComplexity: {
