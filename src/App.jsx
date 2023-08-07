@@ -7,8 +7,6 @@ import ErrorPage from "./pages/NotFound";
 function App() {
 	return (
 		<>
-			<div>Hola mundo</div>
-
 			<Routes>
 				<Route path="/" exact element={<Home />} errorElement={<ErrorPage />} />
 				<Route path="/exercise/:id" element={<Exercise />} />

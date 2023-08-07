@@ -1,4 +1,4 @@
-function getNumbersMissing(arrayOfNumbers) {
+export default function getMissingNumbers(arrayOfNumbers) {
 	const missingNumbers = [];
 
 	if (!Array.isArray(arrayOfNumbers)) {
@@ -19,8 +19,3 @@ function getNumbersMissing(arrayOfNumbers) {
 
 	return missingNumbers;
 }
-
-// module.exports = getNumbersMissing;
-
-console.log(getNumbersMissing([4, 3, 2, 7, 8, 2, 3, 1]));
-console.log(getNumbersMissing([1, 1]));
