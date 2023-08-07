@@ -25,3 +25,14 @@ To run the application, use the following command:
 ```bash
 npm run build
 ```
+
+## No UI challenge
+
+Also you can find the challenge without UI in the following files:
+
+```bash
+modules/sumTwoNumbers.js
+modules/missingNumbers.js
+```
+
+Feel free to copy and paste the code in the browser console to see the results or copy and paste the code [here](https://playcode.io/javascript).
