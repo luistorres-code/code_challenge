@@ -7,7 +7,7 @@ export default {
 				dark: "#161a1d",
 				"green-dexcom": "#0daf2a",
 				"green-dexcom-dark": "#137D00",
-				light: "#f2f2f2",
+				light: "#f5f5f5",
 			},
 		},
 	},

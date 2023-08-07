@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import folder from "../assets/folder.png";
+import file from "../assets/file.png";
+import IconMainPage from "../components/IconMainPage";
 
 function Home() {
 	return (
@@ -14,15 +16,15 @@ function Home() {
 					<li className="mx-8 p-3">
 						<Link to="/exercise/1" className="flex flex-col justify-center items-center p-3">
 							<span>Problem 1</span>
-							<img src={folder} alt="Folder" className="w-20" />
-							<span>Missing Numbers</span>
+							<IconMainPage />
+							<span>Two Sum</span>
 						</Link>
 					</li>
 					<li className="mx-8 p-3">
 						<Link to="/exercise/2" className="flex flex-col justify-center items-center p-3">
 							<span>Problem 2</span>
-							<img src={folder} alt="Folder" className="w-20" />
-							<span>Two Sum</span>
+							<IconMainPage />
+							<span>Missing Numbers</span>
 						</Link>
 					</li>
 				</ul>
