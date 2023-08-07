@@ -35,4 +35,6 @@ modules/sumTwoNumbers.js
 modules/missingNumbers.js
 ```
 
+In these file you can find some test cases to try the functions.
+
 Feel free to copy and paste the code in the browser console to see the results or copy and paste the code [here](https://playcode.io/javascript).
